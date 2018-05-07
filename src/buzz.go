@@ -2,11 +2,11 @@ package buzz
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"os/user"
 	"path"
-	"fmt"
 )
 
 type BuzzWord struct {
