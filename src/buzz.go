@@ -47,8 +47,8 @@ func LoadBuzzwords(filepath string) ([]BuzzWord, error) {
 	}
 
 	content, err := ioutil.ReadAll(file)
-	if err != nil {
-		return nil, err
+	if err != nil || len(content) == 0 {
+		return make([]BuzzWord, 0), err
 	}
 
 	var ret []BuzzWord
